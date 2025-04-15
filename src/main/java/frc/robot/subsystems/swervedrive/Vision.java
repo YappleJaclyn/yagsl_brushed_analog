@@ -38,8 +38,8 @@ import org.photonvision.simulation.SimCameraProperties;
 import org.photonvision.simulation.VisionSystemSim;
 import org.photonvision.targeting.PhotonPipelineResult;
 import org.photonvision.targeting.PhotonTrackedTarget;
-import swervelib.SwerveDrive;
-import swervelib.telemetry.SwerveDriveTelemetry;
+import swervelibnew.SwerveDrive;
+import swervelibnew.telemetry.SwerveDriveTelemetry;
 
 
 /**
@@ -71,7 +71,7 @@ public class Vision
    */
   private             Supplier<Pose2d>    currentPose;
   /**
-   * Field from {@link swervelib.SwerveDrive#field}
+   * Field from {@link swervelibnew.SwerveDrive#field}
    */
   private             Field2d             field2d;
 
@@ -394,7 +394,7 @@ public class Vision
     /**
      * Estimated robot pose.
      */
-    public        Optional<EstimatedRobotPose> estimatedRobotPose = Optional.empty();
+    public Optional<EstimatedRobotPose> estimatedRobotPose = Optional.empty();
 
     /**
      * Simulated camera instance which only exists during simulations.
@@ -530,9 +530,7 @@ public class Vision
       {
         mostRecentTimestamp = Math.max(mostRecentTimestamp, result.getTimestampSeconds());
       }
-      if ((resultsList.isEmpty() || (currentTimestamp - mostRecentTimestamp >= debounceTime)) &&
-          (currentTimestamp - lastReadTimestamp) >= debounceTime)
-      {
+
         resultsList = Robot.isReal() ? camera.getAllUnreadResults() : cameraSim.getCamera().getAllUnreadResults();
         lastReadTimestamp = currentTimestamp;
         resultsList.sort((PhotonPipelineResult a, PhotonPipelineResult b) -> {
@@ -542,7 +540,7 @@ public class Vision
         {
           updateEstimatedGlobalPose();
         }
-      }
+
     }
 
     /**

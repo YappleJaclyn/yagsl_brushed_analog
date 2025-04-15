@@ -43,15 +43,15 @@ import java.util.function.DoubleSupplier;
 import java.util.function.Supplier;
 import org.json.simple.parser.ParseException;
 import org.photonvision.targeting.PhotonPipelineResult;
-import swervelib.SwerveController;
-import swervelib.SwerveDrive;
-import swervelib.SwerveDriveTest;
-import swervelib.math.SwerveMath;
-import swervelib.parser.SwerveControllerConfiguration;
-import swervelib.parser.SwerveDriveConfiguration;
-import swervelib.parser.SwerveParser;
-import swervelib.telemetry.SwerveDriveTelemetry;
-import swervelib.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
+import swervelibnew.SwerveController;
+import swervelibnew.SwerveDrive;
+import swervelibnew.SwerveDriveTest;
+import swervelibnew.math.SwerveMath;
+import swervelibnew.parser.SwerveControllerConfiguration;
+import swervelibnew.parser.SwerveDriveConfiguration;
+import swervelibnew.parser.SwerveParser;
+import swervelibnew.telemetry.SwerveDriveTelemetry;
+import swervelibnew.telemetry.SwerveDriveTelemetry.TelemetryVerbosity;
 
 public class SwerveSubsystem extends SubsystemBase
 {

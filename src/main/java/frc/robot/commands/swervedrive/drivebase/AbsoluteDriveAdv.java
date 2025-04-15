@@ -14,8 +14,8 @@ import frc.robot.subsystems.swervedrive.SwerveSubsystem;
 import java.util.List;
 import java.util.function.BooleanSupplier;
 import java.util.function.DoubleSupplier;
-import swervelib.SwerveController;
-import swervelib.math.SwerveMath;
+import swervelibnew.SwerveController;
+import swervelibnew.math.SwerveMath;
 
 /**
  * A more advanced Swerve Control System that has 4 buttons for which direction to face
